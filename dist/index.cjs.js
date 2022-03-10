@@ -3314,12 +3314,12 @@ var localStorageKey = "accountStatus";
 var WalletCard = function (_a) {
     var login = _a.login, walletConfig = _a.walletConfig, onDismiss = _a.onDismiss, mb = _a.mb;
     var title = walletConfig.title, Icon = walletConfig.icon;
-    return (React__default["default"].createElement(Button, { fullWidth: true, variant: "tertiary", onClick: function () {
+    return (React__default["default"].createElement(Button, { fullWidth: true, variant: "primary", onClick: function () {
             login(walletConfig.connectorId);
             window.localStorage.setItem(localStorageKey, "1");
             onDismiss();
         }, style: { justifyContent: "space-between" }, mb: mb, id: "wallet-connect-".concat(title.toLocaleLowerCase()) },
-        React__default["default"].createElement(Text, { bold: true, color: "primary", mr: "16px" }, title),
+        React__default["default"].createElement(Text, { bold: true, color: "contrast", mr: "16px" }, title),
         React__default["default"].createElement(Icon, { width: "32px" })));
 };
 
@@ -3374,7 +3374,7 @@ var AccountModal = function (_a) {
             React__default["default"].createElement(LinkExternal, { small: true, href: "https://bscscan.com/address/".concat(account), mr: "16px" }, "View on BscScan"),
             React__default["default"].createElement(CopyToClipboard, { toCopy: account }, "Copy Address")),
         React__default["default"].createElement(Flex$1, { justifyContent: "center" },
-            React__default["default"].createElement(Button, { size: "sm", variant: "secondary", onClick: function () {
+            React__default["default"].createElement(Button, { size: "sm", variant: "primary", onClick: function () {
                     logout();
                     window.localStorage.removeItem(localStorageKey);
                     onDismiss();
@@ -3392,9 +3392,9 @@ var UserBlock = function (_a) {
     var account = _a.account, login = _a.login, logout = _a.logout;
     var _b = useWalletModal(login, logout, account), onPresentConnectModal = _b.onPresentConnectModal, onPresentAccountModal = _b.onPresentAccountModal;
     var accountEllipsis = account ? "".concat(account.substring(0, 4), "...").concat(account.substring(account.length - 4)) : null;
-    return (React__default["default"].createElement("div", null, account ? (React__default["default"].createElement(Button, { size: "sm", variant: "tertiary", color: "secondary", onClick: function () {
+    return (React__default["default"].createElement("div", null, account ? (React__default["default"].createElement(Button, { size: "md", variant: "primary", color: "contrast", onClick: function () {
             onPresentAccountModal();
-        } }, accountEllipsis)) : (React__default["default"].createElement(Button, { size: "sm", variant: "tertiary", color: "secondary", onClick: function () {
+        } }, accountEllipsis)) : (React__default["default"].createElement(Button, { size: "md", variant: "primary", color: "contrast", onClick: function () {
             onPresentConnectModal();
         } }, "Connect"))));
 };
@@ -3524,7 +3524,7 @@ var UserBlock = function (_a) {
 var MENU_HEIGHT = 100;
 
 var Wrapper = styled__default["default"].div(templateObject_1$3 || (templateObject_1$3 = __makeTemplateObject(["\n  position: relative;\n  width: 100%;\n"], ["\n  position: relative;\n  width: 100%;\n"])));
-var StyledNav = styled__default["default"].nav(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  position: fixed;\n  top: ", ";\n  left: 0;\n  transition: top 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: 100%;\n  height: ", "px;\n  // background-color: ", ";\n  background-color: #fea726;\n  border-bottom: solid 2px rgba(133, 133, 133, 0.1);\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"], ["\n  position: fixed;\n  top: ", ";\n  left: 0;\n  transition: top 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: 100%;\n  height: ", "px;\n  // background-color: ", ";\n  background-color: #fea726;\n  border-bottom: solid 2px rgba(133, 133, 133, 0.1);\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"])), function (_a) {
+var StyledNav = styled__default["default"].nav(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  position: fixed;\n  top: ", ";\n  left: 0;\n  transition: top 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: 100%;\n  height: ", "px;\n  // background-color: ", ";\n  background-color: #00aeef;\n  border-bottom: solid 2px rgba(133, 133, 133, 0.1);\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"], ["\n  position: fixed;\n  top: ", ";\n  left: 0;\n  transition: top 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: 100%;\n  height: ", "px;\n  // background-color: ", ";\n  background-color: #00aeef;\n  border-bottom: solid 2px rgba(133, 133, 133, 0.1);\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"])), function (_a) {
     var showMenu = _a.showMenu;
     return (showMenu ? 0 : "-".concat(MENU_HEIGHT, "px"));
 }, MENU_HEIGHT, function (_a) {
