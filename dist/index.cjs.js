@@ -3128,7 +3128,7 @@ var StyledMenuItemContainer = styled__default["default"].div(templateObject_1$7 
         $variant === "subMenu" &&
         "\n      &:before{\n        content: \"\";\n        position: absolute;\n        bottom: 0;\n        height: 4px;\n        width: 100%;\n        background-color: ".concat(theme.colors.primary, ";\n        border-radius: 2px 2px 0 0;\n      }\n    ");
 });
-var StyledMenuItem = styled__default["default"].a(templateObject_2$3 || (templateObject_2$3 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n  align-items: center;\n\n  // color: ", ";\n  color: ", ";\n  // font-size: 16px;\n  font-size: .875rem;\n  letter-spacing: 1px;\n  font-family: berlin-sans-regular;\n  // letter-spacing: .0892857143em;\n  font-weight: 600;\n  // font-weight: ", ";\n\n  ", "\n\n  ", "\n\n  &:hover {\n    // background: ", ";\n    background-color: #35354720;\n    ", ";\n  }\n"], ["\n  position: relative;\n  display: flex;\n  align-items: center;\n\n  // color: ", ";\n  color: ", ";\n  // font-size: 16px;\n  font-size: .875rem;\n  letter-spacing: 1px;\n  font-family: berlin-sans-regular;\n  // letter-spacing: .0892857143em;\n  font-weight: 600;\n  // font-weight: ", ";\n\n  ", "\n\n  ", "\n\n  &:hover {\n    // background: ", ";\n    background-color: #35354720;\n    ", ";\n  }\n"])), function (_a) {
+var StyledMenuItem = styled__default["default"].a(templateObject_2$3 || (templateObject_2$3 = __makeTemplateObject(["\n  position: relative;\n  display: flex;\n  align-items: center;\n\n  // color: ", ";\n  color: ", ";\n  // font-size: 16px;\n  font-size: 1.275rem;\n  letter-spacing: 1px;\n  font-family: berlin-sans-regular;\n  // letter-spacing: .0892857143em;\n  font-weight: 600;\n  // font-weight: ", ";\n\n  ", "\n\n  ", "\n\n  &:hover {\n    // background: ", ";\n    background-color: #35354720;\n    ", ";\n  }\n"], ["\n  position: relative;\n  display: flex;\n  align-items: center;\n\n  // color: ", ";\n  color: ", ";\n  // font-size: 16px;\n  font-size: 1.275rem;\n  letter-spacing: 1px;\n  font-family: berlin-sans-regular;\n  // letter-spacing: .0892857143em;\n  font-weight: 600;\n  // font-weight: ", ";\n\n  ", "\n\n  ", "\n\n  &:hover {\n    // background: ", ";\n    background-color: #35354720;\n    ", ";\n  }\n"])), function (_a) {
     var theme = _a.theme, $isActive = _a.$isActive;
     return ($isActive ? theme.colors.secondary : theme.colors.textSubtle);
 }, function (_a) {
@@ -3179,7 +3179,7 @@ var Logo$1 = function (_a) {
         React__default["default"].createElement("image", { width: "48", height: "48", href: isDark ? '/images/egg/LogoTextNewDark.png' : '/images/egg/LogoTextNewWhite.png' })));
 };
 
-var StyledLink = styled__default["default"](reactRouterDom.Link)(templateObject_1$6 || (templateObject_1$6 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  .mobile-icon {\n    width: 32px;\n    ", " {\n      display: none;\n    }\n  }\n  .desktop-icon {\n    width: 48px;\n    display: none;\n    ", " {\n      display: block;\n    }\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  .mobile-icon {\n    width: 32px;\n    ", " {\n      display: none;\n    }\n  }\n  .desktop-icon {\n    width: 48px;\n    display: none;\n    ", " {\n      display: block;\n    }\n  }\n"])), function (_a) {
+var StyledLink = styled__default["default"](reactRouterDom.Link)(templateObject_1$6 || (templateObject_1$6 = __makeTemplateObject(["\n  display: flex;\n  align-items: center;\n  .mobile-icon {\n    width: 60px;\n    ", " {\n      display: none;\n    }\n  }\n  .desktop-icon {\n    width: 100px;\n    display: none;\n    ", " {\n      display: block;\n    }\n  }\n"], ["\n  display: flex;\n  align-items: center;\n  .mobile-icon {\n    width: 60px;\n    ", " {\n      display: none;\n    }\n  }\n  .desktop-icon {\n    width: 100px;\n    display: none;\n    ", " {\n      display: block;\n    }\n  }\n"])), function (_a) {
     var theme = _a.theme;
     return theme.mediaQueries.nav;
 }, function (_a) {
@@ -3521,7 +3521,7 @@ var UserBlock = function (_a) {
         ],
     },
 ];
-var MENU_HEIGHT = 62;
+var MENU_HEIGHT = 100;
 
 var Wrapper = styled__default["default"].div(templateObject_1$3 || (templateObject_1$3 = __makeTemplateObject(["\n  position: relative;\n  width: 100%;\n"], ["\n  position: relative;\n  width: 100%;\n"])));
 var StyledNav = styled__default["default"].nav(templateObject_2 || (templateObject_2 = __makeTemplateObject(["\n  position: fixed;\n  top: ", ";\n  left: 0;\n  transition: top 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: 100%;\n  height: ", "px;\n  // background-color: ", ";\n  background-color: #fea726;\n  border-bottom: solid 2px rgba(133, 133, 133, 0.1);\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"], ["\n  position: fixed;\n  top: ", ";\n  left: 0;\n  transition: top 0.2s;\n  display: flex;\n  justify-content: space-between;\n  align-items: center;\n  padding-left: 8px;\n  padding-right: 16px;\n  width: 100%;\n  height: ", "px;\n  // background-color: ", ";\n  background-color: #fea726;\n  border-bottom: solid 2px rgba(133, 133, 133, 0.1);\n  z-index: 20;\n  transform: translate3d(0, 0, 0);\n"])), function (_a) {
@@ -3540,7 +3540,7 @@ styled__default["default"](Overlay)(templateObject_5 || (templateObject_5 = __ma
     var theme = _a.theme;
     return theme.mediaQueries.nav;
 });
-var StyledFlex = styled__default["default"](Flex$1)(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n  width: 100%;\n  display: flex;\n  justify-content: space-between;\n"], ["\n  width: 100%;\n  display: flex;\n  justify-content: space-between;\n"])));
+var StyledFlex = styled__default["default"](Flex$1)(templateObject_6 || (templateObject_6 = __makeTemplateObject(["\n  width: 100%;\n  display: flex;\n  justify-content: space-evenly;\n"], ["\n  width: 100%;\n  display: flex;\n  justify-content: space-evenly;\n"])));
 var StyledMenuItems = styled__default["default"](MenuItems)(templateObject_7 || (templateObject_7 = __makeTemplateObject(["\n  align-items: center;\n"], ["\n  align-items: center;\n"])));
 var Menu = function (_a) {
     var _b;
@@ -3584,10 +3584,10 @@ var Menu = function (_a) {
         React__default["default"].createElement(StyledNav, { showMenu: showMenu },
             React__default["default"].createElement(StyledFlex, null,
                 React__default["default"].createElement(Logo, { isDark: isDark, href: (_b = homeLink === null || homeLink === void 0 ? void 0 : homeLink.href) !== null && _b !== void 0 ? _b : "/" }),
-                !isMobile && React__default["default"].createElement(StyledMenuItems, { items: links, ml: "24px" })),
-            React__default["default"].createElement(Flex$1, { alignItems: "center" },
-                !isMobile && (React__default["default"].createElement(Box, { mr: "12px" })),
-                React__default["default"].createElement(UserBlock, { account: account, login: login, logout: logout }))),
+                !isMobile && React__default["default"].createElement(StyledMenuItems, { items: links, ml: "24px" }),
+                React__default["default"].createElement(Flex$1, { alignItems: "center" },
+                    !isMobile && (React__default["default"].createElement(Box, { mr: "12px" })),
+                    React__default["default"].createElement(UserBlock, { account: account, login: login, logout: logout })))),
         React__default["default"].createElement(BodyWrapper, null,
             React__default["default"].createElement(Inner, { isPushed: isPushed, showMenu: showMenu }, children),
             isMobile && React__default["default"].createElement(BottomNav, { items: links }))));

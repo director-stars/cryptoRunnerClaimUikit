@@ -28,7 +28,7 @@ const StyledMenuItem = styled.a<StyledMenuItemProps>`
   // color: ${({ theme, $isActive }) => ($isActive ? theme.colors.secondary : theme.colors.textSubtle)};
   color: ${({ $isActive }) => ($isActive ? "#d63341" : "#fff")};
   // font-size: 16px;
-  font-size: .875rem;
+  font-size: 1.275rem;
   letter-spacing: 1px;
   font-family: berlin-sans-regular;
   // letter-spacing: .0892857143em;
