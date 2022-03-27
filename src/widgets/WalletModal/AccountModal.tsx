@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../../components/Button/Button";
+import WalletButton from "../../components/Button/WalletButton";
 import Text from "../../components/Text/Text";
 import LinkExternal from "../../components/Link/LinkExternal";
 import Flex from "../../components/Flex/Flex";
@@ -29,7 +29,7 @@ const AccountModal: React.FC<Props> = ({ account, logout, onDismiss = () => null
       <CopyToClipboard toCopy={account}>Copy Address</CopyToClipboard>
     </Flex>
     <Flex justifyContent="center">
-      <Button
+      <WalletButton
         size="sm"
         variant="primary"
         onClick={() => {
@@ -40,7 +40,7 @@ const AccountModal: React.FC<Props> = ({ account, logout, onDismiss = () => null
         }}
       >
         Logout
-      </Button>
+      </WalletButton>
     </Flex>
   </Modal>
 );

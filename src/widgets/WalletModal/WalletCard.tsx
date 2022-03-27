@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../../components/Button/Button";
+import WalletButton from "../../components/Button/WalletButton";
 import Text from "../../components/Text/Text";
 import { localStorageKey } from "./config";
 import { Login, Config } from "./types";
@@ -8,13 +8,13 @@ interface Props {
   walletConfig: Config;
   login: Login;
   onDismiss: () => void;
-  mb: string;
+  mt: string;
 }
 
-const WalletCard: React.FC<Props> = ({ login, walletConfig, onDismiss, mb }) => {
+const WalletCard: React.FC<Props> = ({ login, walletConfig, onDismiss, mt }) => {
   const { title, icon: Icon } = walletConfig;
   return (
-    <Button
+    <WalletButton
       fullWidth
       variant="primary"
       onClick={() => {
@@ -23,14 +23,14 @@ const WalletCard: React.FC<Props> = ({ login, walletConfig, onDismiss, mb }) => 
         onDismiss();
       }}
       style={{ justifyContent: "space-between" }}
-      mb={mb}
+      mt={mt}
       id={`wallet-connect-${title.toLocaleLowerCase()}`}
     >
       <Text bold color="contrast" mr="16px">
         {title}
       </Text>
       <Icon width="32px" />
-    </Button>
+    </WalletButton>
   );
 };
 

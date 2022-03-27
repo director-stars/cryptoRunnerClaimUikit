@@ -14,18 +14,19 @@ interface Props extends InjectedProps {
 }
 
 const StyledModal = styled.div`
-  background: ${({ theme }) => theme.modal.background};
+  background: #fff;
   box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);
-  border: 1px solid ${({ theme }) => theme.colors.borderColor};
-  border-radius: 32px;
+  // border: 1px solid ${({ theme }) => theme.colors.borderColor};
+  border-radius: 10px;
   width: 100%;
   z-index: ${({ theme }) => theme.zIndices.modal};
-  overflow-y: auto;
+  overflow-y: visible;
   ${({ theme }) => theme.mediaQueries.xs} {
     width: auto;
     min-width: 360px;
     max-width: 100%;
   }
+  padding: 20px;
 `;
 
 const ModalHeader = styled.div`
@@ -33,12 +34,39 @@ const ModalHeader = styled.div`
   align-items: center;
   border-bottom: 1px solid #e9eaeb;
   align-items: center;
-  padding: 12px 24px;
 `;
 
 const ModalTitle = styled(Flex)`
   align-items: center;
   flex: 1;
+  color: rgb(0 0 0 / 80%);
+  * {
+    color: rgb(0 0 0 / 80%);
+    font-size: 23px;
+  }
+  margin-bottom: 10px;
+`;
+
+const StyledIconButton = styled(IconButton)`
+  border-radius: 100px;
+  background-color: #4f8dff;
+  transform: translate(40px, -40px);
+  color: #fff;
+  border-width: 0px;
+  box-shadow: 3px -3px 10px rgb(0 0 0 / 30%);
+  width: 40px;
+  height: 40px;
+  &:hover:not(:disabled):not(.button--disabled):not(:active), &:active:not(:disabled) {
+    background-color: #4f8dff;
+    border-width: 0px;
+    box-shadow: 0 0 0 2px #4f8dff;
+  }
+  &:focus:not(:active):not(:disabled) {
+    box-shadow: 0 0 0 2px #4f8dff;
+  }
+  * {
+    fill: #fff;
+  }
 `;
 
 const Modal: React.FC<Props> = ({
@@ -60,12 +88,12 @@ const Modal: React.FC<Props> = ({
         <Heading>{title}</Heading>
       </ModalTitle>
       {!hideCloseButton && (
-        <IconButton variant="text" onClick={onDismiss} aria-label="Close the dialog">
+        <StyledIconButton variant="text" onClick={onDismiss} aria-label="Close the dialog">
           <CloseIcon color="primary" />
-        </IconButton>
+        </StyledIconButton>
       )}
     </ModalHeader>
-    <Flex flexDirection="column" p={bodyPadding}>
+    <Flex flexDirection="column">
       {children}
     </Flex>
   </StyledModal>

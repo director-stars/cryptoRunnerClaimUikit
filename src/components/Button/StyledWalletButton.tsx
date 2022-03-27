@@ -45,15 +45,15 @@ const getButtonVariantProp = (prop: keyof ButtonThemeVariant) => ({
   return theme.button[variant][prop];
 };
 
-const StyledButton = styled.button<ButtonProps>`
+const StyledWalletButton = styled.button<ButtonProps>`
   align-items: center;
-  background-color: ${getButtonVariantProp("background")};
+  background-color: rgb(239, 244, 245);
   // border: ${getButtonVariantProp("border")};
-  // border-radius: 16px;
-  box-shadow: ${getButtonVariantProp("boxShadow")};
+  border-radius: 15px;
+  // box-shadow: ${getButtonVariantProp("boxShadow")};
   // color: ${getButtonVariantProp("color")};
-  border: 2px solid #000;
-  color: #000;
+  border-width: 0px;
+  color: #4f8dff;
   cursor: pointer;
   display: inline-flex;
   font-family: inherit;
@@ -71,7 +71,7 @@ const StyledButton = styled.button<ButtonProps>`
   opacity: ${({ isLoading }) => (isLoading ? 0.5 : 1)};
 
   &:hover:not(:disabled):not(.button--disabled):not(:active) {
-    background-color: ${getButtonVariantProp("backgroundHover")};
+    background-color: rgba(239, 244, 245, 0.5);
     border-color: ${getButtonVariantProp("borderColorHover")};
   }
 
@@ -80,18 +80,21 @@ const StyledButton = styled.button<ButtonProps>`
   }
 
   &:active {
-    background-color: ${getButtonVariantProp("backgroundActive")};
+    background-color: rgba(239, 244, 245, 0.5);
     box-shadow: ${getButtonVariantProp("boxShadowActive")};
   }
 
   ${getDisabledStyles}
   ${removePointerEvents}
   ${space}
+  * {
+    color: #4f8dff;
+  }
 `;
 
-StyledButton.defaultProps = {
+StyledWalletButton.defaultProps = {
   fullWidth: false,
   type: "button",
 };
 
-export default StyledButton;
+export default StyledWalletButton;
