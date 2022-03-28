@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import WalletButton from "../../components/Button/WalletButton";
 import Text from "../../components/Text/Text";
 import LinkExternal from "../../components/Link/LinkExternal";
@@ -13,16 +14,22 @@ interface Props {
   onDismiss?: () => void;
 }
 
+const StyledText = styled(Text)`
+  color: #4f8dff;
+  margin-top: 20px;
+  margin-bottom: 10px;
+`
+
 const AccountModal: React.FC<Props> = ({ account, logout, onDismiss = () => null }) => (
   <Modal title="Your wallet" onDismiss={onDismiss}>
-    <Text
+    <StyledText
       fontSize="20px"
       bold
       style={{ whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis", marginBottom: "8px" }}
     >
       {account}
-    </Text>
-    <Flex mb="32px">
+    </StyledText>
+    <Flex mb="12px">
       <LinkExternal small href={`https://bscscan.com/address/${account}`} mr="16px">
         View on BscScan
       </LinkExternal>
