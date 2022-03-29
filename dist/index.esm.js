@@ -3671,7 +3671,7 @@ var Toast = function (_a) {
             clearTimeout(timer.current);
         }
         timer.current = window.setTimeout(function () {
-            // handleRemove();
+            handleRemove();
         }, ttl);
     };
     useEffect(function () {
@@ -3679,7 +3679,7 @@ var Toast = function (_a) {
             clearTimeout(timer.current);
         }
         timer.current = window.setTimeout(function () {
-            // handleRemove();
+            handleRemove();
         }, ttl);
         return function () {
             clearTimeout(timer.current);
