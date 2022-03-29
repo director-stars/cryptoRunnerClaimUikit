@@ -43,7 +43,7 @@ const Toast: React.FC<ToastProps> = ({ toast, onRemove, style, ttl, ...props }) 
     }
 
     timer.current = window.setTimeout(() => {
-      handleRemove();
+      // handleRemove();
     }, ttl);
   };
 
@@ -53,7 +53,7 @@ const Toast: React.FC<ToastProps> = ({ toast, onRemove, style, ttl, ...props }) 
     }
 
     timer.current = window.setTimeout(() => {
-      handleRemove();
+      // handleRemove();
     }, ttl);
 
     return () => {

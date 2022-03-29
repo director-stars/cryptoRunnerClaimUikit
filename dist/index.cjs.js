@@ -1579,7 +1579,7 @@ var getIcon = function (variant) {
             return Icon$2h;
     }
 };
-var IconLabel = styled__default["default"].div(templateObject_1$I || (templateObject_1$I = __makeTemplateObject(["\n  background-color: ", ";\n  border-radius: 16px 0 0 16px;\n  color: ", ";\n  padding: 12px;\n"], ["\n  background-color: ", ";\n  border-radius: 16px 0 0 16px;\n  color: ", ";\n  padding: 12px;\n"])), getThemeColor, function (_a) {
+var IconLabel = styled__default["default"].div(templateObject_1$I || (templateObject_1$I = __makeTemplateObject(["\n  background-color: ", ";\n  // border-radius: 16px 0 0 16px;\n  color: ", ";\n  padding: 12px;\n"], ["\n  background-color: ", ";\n  // border-radius: 16px 0 0 16px;\n  color: ", ";\n  padding: 12px;\n"])), getThemeColor, function (_a) {
     var theme = _a.theme;
     return theme.alert.background;
 });
@@ -1589,10 +1589,12 @@ var Details = styled__default["default"].div(templateObject_2$g || (templateObje
     return (hasHandler ? "".concat(withHandlerSpacing, "px") : "12px");
 });
 var CloseHandler = styled__default["default"].div(templateObject_3$7 || (templateObject_3$7 = __makeTemplateObject(["\n  border-radius: 0 16px 16px 0;\n  right: 8px;\n  position: absolute;\n  top: 8px;\n"], ["\n  border-radius: 0 16px 16px 0;\n  right: 8px;\n  position: absolute;\n  top: 8px;\n"])));
-var StyledAlert = styled__default["default"](Flex$1)(templateObject_4$5 || (templateObject_4$5 = __makeTemplateObject(["\n  position: relative;\n  background-color: ", ";\n  border-radius: 16px;\n  box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);\n"], ["\n  position: relative;\n  background-color: ", ";\n  border-radius: 16px;\n  box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);\n"])), function (_a) {
+var StyledAlert = styled__default["default"](Flex$1)(templateObject_4$5 || (templateObject_4$5 = __makeTemplateObject(["\n  position: relative;\n  background-color: ", ";\n  // border-radius: 16px;\n  box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);\n"], ["\n  position: relative;\n  background-color: ", ";\n  // border-radius: 16px;\n  box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);\n"])), function (_a) {
     var theme = _a.theme;
     return theme.alert.background;
 });
+var StyledIconButton$1 = styled__default["default"](IconButton)(templateObject_5$3 || (templateObject_5$3 = __makeTemplateObject(["\n  width: 34px;\n  height: 34px;\n  color: #31D0AA;\n  border-color: #31D0AA;\n  & : hover:not(:disabled):not(.button--disabled):not(:active){\n    color: #27262c;\n    border-color: #27262c;\n    background-color: #31D0AA;\n    box-shadow: 0 0 0 2px #31D0AA;\n  }\n"], ["\n  width: 34px;\n  height: 34px;\n  color: #31D0AA;\n  border-color: #31D0AA;\n  & : hover:not(:disabled):not(.button--disabled):not(:active){\n    color: #27262c;\n    border-color: #27262c;\n    background-color: #31D0AA;\n    box-shadow: 0 0 0 2px #31D0AA;\n  }\n"])));
+var StyledCloseIcon = styled__default["default"](Icon$1O)(templateObject_6$2 || (templateObject_6$2 = __makeTemplateObject(["\n\n"], ["\n\n"])));
 var Alert = function (_a) {
     var title = _a.title, children = _a.children, variant = _a.variant, onClick = _a.onClick;
     var Icon = getIcon(variant);
@@ -1603,10 +1605,10 @@ var Alert = function (_a) {
             React__default["default"].createElement(Text, { bold: true }, title),
             typeof children === "string" ? React__default["default"].createElement(Text, { as: "p" }, children) : children),
         onClick && (React__default["default"].createElement(CloseHandler, null,
-            React__default["default"].createElement(IconButton, { size: "sm", variant: "text", onClick: onClick },
-                React__default["default"].createElement(Icon$1O, { width: "24px", color: "currentColor" }))))));
+            React__default["default"].createElement(StyledIconButton$1, { size: "sm", variant: "text", onClick: onClick },
+                React__default["default"].createElement(StyledCloseIcon, { width: "24px", color: "currentColor" }))))));
 };
-var templateObject_1$I, templateObject_2$g, templateObject_3$7, templateObject_4$5;
+var templateObject_1$I, templateObject_2$g, templateObject_3$7, templateObject_4$5, templateObject_5$3, templateObject_6$2;
 
 var Separator = styled__default["default"].div(templateObject_1$H || (templateObject_1$H = __makeTemplateObject(["\n  align-items: center;\n  color: currentColor;\n  display: flex;\n  justify-content: center;\n  padding-left: 4px;\n  padding-right: 4px;\n\n  ", " {\n    padding-left: 8px;\n    padding-right: 8px;\n  }\n\n  ", " {\n    padding-left: 16px;\n    padding-right: 16px;\n  }\n"], ["\n  align-items: center;\n  color: currentColor;\n  display: flex;\n  justify-content: center;\n  padding-left: 4px;\n  padding-right: 4px;\n\n  ", " {\n    padding-left: 8px;\n    padding-right: 8px;\n  }\n\n  ", " {\n    padding-left: 16px;\n    padding-right: 16px;\n  }\n"])), function (_a) {
     var theme = _a.theme;
@@ -3701,7 +3703,7 @@ var Toast = function (_a) {
             clearTimeout(timer.current);
         }
         timer.current = window.setTimeout(function () {
-            handleRemove();
+            // handleRemove();
         }, ttl);
     };
     React.useEffect(function () {
@@ -3709,7 +3711,7 @@ var Toast = function (_a) {
             clearTimeout(timer.current);
         }
         timer.current = window.setTimeout(function () {
-            handleRemove();
+            // handleRemove();
         }, ttl);
         return function () {
             clearTimeout(timer.current);
@@ -3763,7 +3765,7 @@ var lightColors = __assign(__assign(__assign({}, baseColors), brandColors), { ba
     } });
 var darkColors = __assign(__assign(__assign({}, baseColors), brandColors), { secondary: "#D63341", background: "#fff", backgroundDisabled: "#d3d3d3", backgroundAlt: "#27262c", backgroundAlt2: "rgba(39, 38, 44, 0.7)", cardBorder: "#383241", contrast: "#FFFFFF", invertedContrast: "#191326", input: "#483f5a", primaryDark: "#FEA726", 
     // tertiary: "#353547",
-    tertiary: "#d63341", text: "#EAE2FC", textDisabled: "#666171", textSubtle: "#c9c4d4", borderColor: "#524B63", card: "rgb(255 100 2)", cardHeader: "#D63341", cardItemKey: "#501f00", cardItemValue: "#FEA726", gradients: {
+    tertiary: "#d63341", text: "#EAE2FC", textDisabled: "#666171", textSubtle: "#c9c4d4", borderColor: "#524B63", card: "#27262c", cardHeader: "#D63341", cardItemKey: "#501f00", cardItemValue: "#FEA726", gradients: {
         bubblegum: "linear-gradient(139.73deg, #313D5C 0%, #3D2A54 100%)",
     } });
 

@@ -46,7 +46,7 @@ const getIcon = (variant: AlertProps["variant"] = variants.INFO) => {
 
 const IconLabel = styled.div<ThemedIconLabel>`
   background-color: ${getThemeColor};
-  border-radius: 16px 0 0 16px;
+  // border-radius: 16px 0 0 16px;
   color: ${({ theme }) => theme.alert.background};
   padding: 12px;
 `;
@@ -70,10 +70,26 @@ const CloseHandler = styled.div`
 const StyledAlert = styled(Flex)`
   position: relative;
   background-color: ${({ theme }) => theme.alert.background};
-  border-radius: 16px;
+  // border-radius: 16px;
   box-shadow: 0px 20px 36px -8px rgba(14, 14, 44, 0.1), 0px 1px 1px rgba(0, 0, 0, 0.05);
 `;
 
+const StyledIconButton = styled(IconButton)`
+  width: 34px;
+  height: 34px;
+  color: #31D0AA;
+  border-color: #31D0AA;
+  & : hover:not(:disabled):not(.button--disabled):not(:active){
+    color: #27262c;
+    border-color: #27262c;
+    background-color: #31D0AA;
+    box-shadow: 0 0 0 2px #31D0AA;
+  }
+`
+
+const StyledCloseIcon = styled(CloseIcon)`
+
+`
 const Alert: React.FC<AlertProps> = ({ title, children, variant, onClick }) => {
   const Icon = getIcon(variant);
 
@@ -88,9 +104,9 @@ const Alert: React.FC<AlertProps> = ({ title, children, variant, onClick }) => {
       </Details>
       {onClick && (
         <CloseHandler>
-          <IconButton size="sm" variant="text" onClick={onClick}>
-            <CloseIcon width="24px" color="currentColor" />
-          </IconButton>
+          <StyledIconButton size="sm" variant="text" onClick={onClick}>
+            <StyledCloseIcon width="24px" color="currentColor" />
+          </StyledIconButton>
         </CloseHandler>
       )}
     </StyledAlert>
