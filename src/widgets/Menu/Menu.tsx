@@ -129,7 +129,7 @@ const Menu: React.FC<NavProps> = ({
     <Wrapper>
       <StyledNav showMenu={showMenu}>
         <StyledFlex>
-          <Logo isDark={isDark} href={homeLink?.href ?? "/"} />
+          <Logo isDark={isDark} href={homeLink?.href ?? "https://cryptorunner.io/"} />
           {!isMobile && <StyledMenuItems items={links} ml="24px" />}
           <Flex alignItems="center">
             {!isMobile && (

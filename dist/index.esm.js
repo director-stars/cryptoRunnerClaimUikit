@@ -3619,7 +3619,7 @@ var Menu = function (_a) {
     return (React__default.createElement(Wrapper, null,
         React__default.createElement(StyledNav, { showMenu: showMenu },
             React__default.createElement(StyledFlex, null,
-                React__default.createElement(Logo, { isDark: isDark, href: (_b = homeLink === null || homeLink === void 0 ? void 0 : homeLink.href) !== null && _b !== void 0 ? _b : "/" }),
+                React__default.createElement(Logo, { isDark: isDark, href: (_b = homeLink === null || homeLink === void 0 ? void 0 : homeLink.href) !== null && _b !== void 0 ? _b : "https://cryptorunner.io/" }),
                 !isMobile && React__default.createElement(StyledMenuItems, { items: links, ml: "24px" }),
                 React__default.createElement(Flex$1, { alignItems: "center" },
                     !isMobile && (React__default.createElement(Box, { mr: "12px" })),
